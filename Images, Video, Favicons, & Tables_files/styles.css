@@ -1,0 +1,303 @@
+/* ----------------------------------------------------------------
+    THIS CODE IS CALLED CSS RESET, AND IT GIVES YOU MORE CONTROL OF THE STYLES ON YOUR PAGES AND ALLOWS YOU TO BETTER ENSURE SIMILAR DISPLAY ACROSS BROWSERS 
+---------------------------------------------------------------- */
+/* 
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ----- CUSTOM STYLES WRITTEN BY PROF. BARNETT ----- */
+/* ----- ROOT STYLES & CSS VARIABLES ----- */
+:root{
+    --dk-blue: #012E40;
+    --lt-blue: #75B2BF;
+    --lt-red: #BF4F45;
+    --dk-red: #591C1C;
+    --eternity: #0D0B06;
+
+    --transparent-lt-blue: rgba(117, 178, 191, 0.5);
+
+    --lt-gray: #eaeaea;
+    --med-gray: #555;
+    --dk-gray: #222;
+
+    --fonts: 'Playfair Display', Georgia, serif;
+    --box-shadow-sm: -3px 3px 7px var(--med-gray);
+    --box-shadow-lg: -6px 6px 10px var(--med-gray);
+    --filter-shadow: drop-shadow(-6px 6px 10px var(--med-gray));
+}
+
+/* ----- BODY STYLES ----- */
+body{
+    font-family: var(--fonts);
+    line-height: 1.45;
+    box-sizing: border-box;
+}
+
+/* ----- HEADING STYLES ----- */
+h1, h2, h3{
+    font-weight: bold;
+    margin: 0.5rem;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h2{
+    font-size: 1.75rem;
+    padding: 0.25rem 1rem;
+    background-color: var(--dk-blue);
+    color: var(--lt-gray);
+    border-radius: 0.25rem;
+}
+
+h3{
+    font-size: 1.5rem;
+    text-decoration: var(--lt-red) underline solid;
+    padding-left: 5rem;
+}
+
+h3 span{
+    font-size: 1.75rem;
+    color: var(--lt-red);
+}
+
+/* ----- TEXT STYLES ----- */
+p{
+    padding: 0.5rem 0;
+    max-width: 55ch;
+    margin: 0 auto;
+}
+
+.credit{
+    text-align: center;
+}
+
+code{
+    font-family: monospace;
+    font-size: 1.15rem;
+}
+
+.bold{
+    display: inline;
+    font-weight: bold;
+}
+
+/* ----- LINK STYLES ----- */
+a{
+    display: block;
+    padding: 1rem;
+}
+
+p a{
+    display: inline;
+    padding: 0;
+    color: var(--dk-blue);
+}
+
+/* ----- LINK HOVER STYLES ----- */
+a:hover{
+    color: var(--dk-red);
+}
+
+header a:hover svg{
+    fill: var(--dk-red);
+}
+
+/* ----- IMAGE STYLES ----- */
+img{
+    display: block;
+    margin: 1rem auto;
+    border-radius: 0.25rem;
+}
+
+/* ----- SVG STYLES ----- */
+header svg{
+    display: block;
+    fill: var(--dk-blue);
+    width: 100px;
+    height: auto;
+}
+
+/* ----- HEADER, MAIN, FOOTER STYLES ----- */
+header, main, footer{
+    width: 100%;
+    max-width: calc(1000px - 2rem);
+    margin: 0 auto;
+}
+
+/* ----- HEADER STYLES ----- */
+header{
+    padding: 1rem 2rem;
+    background-color: var(--lt-blue);
+    display: grid;
+    grid-template-columns: 1fr 3fr 5fr;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+/* ----- NAV STYLES ----- */
+nav ul{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+}
+
+nav a{
+    text-align: center;
+    font-weight: bold;
+    color: var(--lt-gray);
+    background-color: var(--dk-blue);
+    text-decoration: none;
+    border-radius: 0.25rem;
+}
+
+/* ----- NAV HOVER STYLES ----- */
+nav a:hover{
+    background-color: var(--lt-gray);
+    color: var(--dk-blue);
+}
+
+/* ----- MAIN STYLES ----- */
+main{
+    padding: 2rem 1rem;
+}
+
+/* ----- VIDEO STYLES ----- */
+video, iframe{
+    display: block;
+    width: 425px;
+    margin: 1rem auto;
+    border-radius: 0.25rem;
+}
+
+/* ----- TABLE STYLES ----- */
+table{
+    width: 245px;
+    margin: 0 auto;
+}
+
+caption{
+    font-weight: bold;
+    font-size: 1.35rem;
+    margin: 0.75rem auto;
+}
+
+thead{
+    background-color: var(--lt-blue);
+    border-radius: 0.25rem;
+}
+
+thead tr{
+    border-bottom: none;
+}
+
+th{
+    font-weight: bold;
+}
+
+tr{
+    border-bottom: 2px solid var(--dk-blue);
+}
+
+td, th{
+    padding: 0.5rem;
+}
+
+td:nth-of-type(2n){
+    text-align: center;
+}
+
+td[colspan]{
+    text-align: center;
+}
+
+table span{
+    font-weight: bold;
+    display: block;
+}
+
+/* ----- FOOTER STYLES ----- */
+footer{
+    padding: 2rem;
+    background-color: var(--lt-blue);
+}
+
+/* ----- FOOTER SOCIAL MEDIA SECTION STYLES ----- */
+footer section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    width: 300px;
+    margin: 0 auto;
+}
+
+footer h2{
+    grid-column: 1/-1;
+    text-align: center;
+    color: var(--dk-gray);
+    background-color: transparent;
+}
+
+/* ----- SOCIAL MEDIA LINK/ICON STYLES ----- */
+footer svg{
+    display: block;
+    padding: 0.5rem;
+    width: auto;
+    height: 40px;
+    stroke: var(--lt-blue);
+    background-color: var(--eternity);
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+/* ----- SOCIAL MEDIA LINK/ICON HOVER STYLES ----- */
+footer a:hover svg{
+    stroke: var(--lt-red);
+}
